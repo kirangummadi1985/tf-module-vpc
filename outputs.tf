@@ -17,3 +17,7 @@ output "SUBNET_CIDR" {
 output "PRIVATE_HOSTED_ZONE_ID" {
   value = data.aws_route53_zone.internal.zone_id
 }
+
+output "NGW_PRIVATE_IP" {
+  value = data.terraform_remote_state.tgw.outputs.NGW_PRIVATE_IP
+}
